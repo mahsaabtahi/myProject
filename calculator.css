@@ -50,8 +50,8 @@ body {
   border-radius: 15px;
   font-size: 2rem;
   color: rgb(88, 86, 86);
-
   cursor: pointer;
+  transition: transform 0.2s;
 }
 
 .number:active {
