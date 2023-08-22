@@ -30,7 +30,7 @@ body {
   border-radius: 16px;
   border: 0;
   box-shadow: 2px 2px 1px rgba(90, 88, 88, 0.466);
-  font-size: 1.6rem;
+  font-size: 2rem;
   color: rgb(88, 86, 86);
 }
 .cal__grid {
@@ -50,5 +50,13 @@ body {
   border-radius: 15px;
   font-size: 2rem;
   color: rgb(88, 86, 86);
+
   cursor: pointer;
+}
+
+.number:active {
+  transform: scale(0.95);
+}
+.clear {
+  background: rgb(220, 199, 245);
 }
