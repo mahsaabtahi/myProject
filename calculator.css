@@ -14,60 +14,83 @@ body {
 }
 
 .calculator {
-  background: rgb(199, 146, 230);
+  background: rgb(0, 2, 1);
   align-content: center;
-  width: 34%;
+  width: 30%;
   height: 40%;
   border-radius: 20px;
-  box-shadow: 2px 2px 2px rgba(97, 96, 96, 0.459);
+  box-shadow: 2px 2px 2px 2px rgba(32, 32, 32, 0.658);
+  min-width: 450px; 
+  max-width: 500px;
+  overflow: hidden;
+ 
+  
 }
 .output {
+  position: relative;
   padding-top: 1rem;
+  height: 290px;
+  
+  
 }
 #cal__input {
+  position: absolute;
   outline: none;
   width: 70%;
+  height: 6rem;
   margin: 1.5rem 4.5rem;
-  padding: 2rem;
-  background: rgb(248, 226, 226);
+  background: rgb(0, 2, 1);
   border-radius: 16px;
   border: 0;
-  box-shadow: 2px 2px 1px rgba(90, 88, 88, 0.466);
-  font-size: 2rem;
-
-  color: rgb(88, 86, 86);
+  font-size: 5rem;
+  font-weight: 300;
+  color: white;
+  padding-left: 0;
+  margin-left: 0.7rem;
+  bottom: 1rem;
+  
+  
 }
 .cal__grid {
+  
   display: grid;
   grid-template-columns: repeat(4, 7rem);
   grid-template-rows: repeat(4, 7rem);
-
+  gap: 2px 3px;
   justify-items: center;
   align-items: center;
   justify-content: center;
 }
 .number {
-  background: rgb(248, 226, 226);
-  width: 4rem;
-  height: 4rem;
+  background: rgb(1, 19, 17);
+  width: 7rem;
+  height: 7rem;
   border: 0;
-  border-radius: 15px;
+  
   font-size: 2rem;
-  color: rgb(88, 86, 86);
+  color: white;
   cursor: pointer;
   transition: transform 0.2s;
+}
+.operand{
+  background: rgb(30, 58, 51);
+  font-size: 2.5rem;
+
 }
 
 .number:active {
   transform: scale(0.95);
 }
-.clear {
-  background: rgb(220, 199, 245);
-}
+
+
 @media (max-width: 480px) {
   .calculator {
     width: 80%;
     height: auto;
+   
+    min-width: unset;
+    max-width: unset;
+    
   }
 
   #cal__input {
@@ -82,8 +105,8 @@ body {
   }
 
   .number {
-    width: 3rem;
-    height: 3rem;
+    width: 5rem;
+    height: 5rem;
     font-size: 1.8rem;
   }
 }
@@ -91,23 +114,26 @@ body {
   .calculator {
     width: 50%;
     height: 60%;
+    min-width: unset;
+    max-width: 600px;
   }
 
   #cal__input {
     width: 80%;
     margin: 1.5rem 3rem;
     padding: 1.5rem;
-    font-size: 1.8rem;
+    font-size: 5rem;
   }
 
   .cal__grid {
     grid-template-columns: repeat(4, 6rem);
     grid-template-rows: repeat(4, 6rem);
+    width: fit-content;
   }
 
   .number {
-    width: 3.5rem;
-    height: 3.5rem;
+    width: 6rem;
+    height: 6rem;
     font-size: 2rem;
   }
 }
