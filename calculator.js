@@ -1,41 +1,53 @@
 'use strict';
-const input=document.getElementById('cal__input');
+let input=document.getElementById('cal__input');
 
 let currentNum='';
 let currentOp='';
+let firstNum='';
 
 function displayNumber(number){
-    currentNum = number;
-    input.value += currentNum;
+    currentNum += number;
+    input.textContent = currentNum;
+    
+   
+
 }
 function displayOpration(operand){
     currentOp=operand;
+    firstNum +=currentNum;
     currentNum='';
-    input.value="";
+    input.textContent ="";
 
 }
 function clearNumber(){
-    input.value="";
+    input.textContent ="";
     currentNum='';
     currentOp='';
 }
 function calculatResult(){
-    let num1=parseFloat(input.value);
-    let num2=parseFloat(currentNum);
+    let num1=parseFloat(firstNum);
+    let num2=parseFloat(input.textContent);
+   
     switch(currentOp){
         case '+':
-            input.value=num1+num2;
+            input.textContent =num1+num2;
             break;
         case '-':
-            input.value=num1-num2;
+            input.textContent =num1-num2;
             break;
         case '*':
-            input.value=num1*num2;
+            input.textContent =num1*num2;
             break;
         case '/':
-            input.value=num1/num2;
+            input.textContent =num1/num2;
             break;
+        default:
+             input.textContent =num2;   
     }
+    currentNum = '';
+    currentOp = '';
+    firstNum='';
+    
 
 }
 

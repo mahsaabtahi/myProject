@@ -21,16 +21,20 @@ body {
   border-radius: 20px;
   box-shadow: 2px 2px 2px rgba(97, 96, 96, 0.459);
 }
+.output {
+  padding-top: 1rem;
+}
 #cal__input {
   outline: none;
   width: 70%;
-  margin: 1.3rem 4.5rem;
-  padding: 1.2rem;
+  margin: 1.5rem 4.5rem;
+  padding: 2rem;
   background: rgb(248, 226, 226);
   border-radius: 16px;
   border: 0;
   box-shadow: 2px 2px 1px rgba(90, 88, 88, 0.466);
   font-size: 2rem;
+
   color: rgb(88, 86, 86);
 }
 .cal__grid {
