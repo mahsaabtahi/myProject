@@ -64,3 +64,50 @@ body {
 .clear {
   background: rgb(220, 199, 245);
 }
+@media (max-width: 480px) {
+  .calculator {
+    width: 80%;
+    height: auto;
+  }
+
+  #cal__input {
+    width: 90%;
+    margin: 1.5rem 0.5rem;
+    padding: 1rem;
+  }
+
+  .cal__grid {
+    grid-template-columns: repeat(4, 5rem);
+    grid-template-rows: repeat(4, 5rem);
+  }
+
+  .number {
+    width: 3rem;
+    height: 3rem;
+    font-size: 1.8rem;
+  }
+}
+@media (min-width: 481px) and (max-width: 1024px) {
+  .calculator {
+    width: 50%;
+    height: 60%;
+  }
+
+  #cal__input {
+    width: 80%;
+    margin: 1.5rem 3rem;
+    padding: 1.5rem;
+    font-size: 1.8rem;
+  }
+
+  .cal__grid {
+    grid-template-columns: repeat(4, 6rem);
+    grid-template-rows: repeat(4, 6rem);
+  }
+
+  .number {
+    width: 3.5rem;
+    height: 3.5rem;
+    font-size: 2rem;
+  }
+}

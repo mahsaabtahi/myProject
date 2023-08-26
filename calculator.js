@@ -34,6 +34,7 @@ function calculatResult(){
             break;
         case '-':
             input.textContent =num1-num2;
+            console.log(num1,num2);
             break;
         case '*':
             input.textContent =num1*num2;
