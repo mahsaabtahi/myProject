@@ -33,15 +33,22 @@ body {
   
   
 }
+#cal__previous{
+  font-size:2rem ;
+  color: rgba(158, 201, 113, 0.479);
+  font-weight: 300;
+  font-family: inherit;
+  margin-left: 0.7rem;
+  margin-top: 7.5rem;
+  
+
+}
 #cal__input {
   position: absolute;
-  outline: none;
   width: 70%;
   height: 6rem;
-  margin: 1.5rem 4.5rem;
+  margin: 0 4.5rem;
   background: rgb(0, 2, 1);
-  border-radius: 16px;
-  border: 0;
   font-size: 5rem;
   font-weight: 300;
   color: white;

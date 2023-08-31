@@ -1,54 +1,67 @@
 'use strict';
-let input=document.getElementById('cal__input');
 
-let currentNum='';
-let currentOp='';
-let firstNum='';
+class Calculator{
+    constructor(){
+    this.input=document.getElementById('cal__input');
+    this.previousNumElement = document.getElementById('cal__previous');
+    this.currentNum='';
+    this.currentOp='';
+    this.previousNum = '';
+    }
+    displayNumber(number){
+    this.currentNum += number;
+    this.input.textContent =this.currentNum;
 
-function displayNumber(number){
-    currentNum += number;
-    input.textContent = currentNum;
-    
+    }
+    displayOpration(operand){
+        this.currentOp=operand;
+        this.previousNum += this.currentNum;
+        this.currentNum='';
+        this.input.textContent='';
+        this.updatePreviousNum();
+
+    }
+    clearNumber(){
+        this.input.textContent="";
+        this.currentNum='';
+        this.currentOp='';
+        this.previousNum='';
+        this.updatePreviousNum();
+    }
+    updatePreviousNum(){
+        this.previousNumElement.textContent=this.previousNum + " " +this.currentOp; 
+    }
+    calculatResult(){
+        let num1=parseFloat(this.previousNum);
+        let num2=parseFloat(this.input.textContent);
+        if(!num1){
+        return false;
+        }
    
-
-}
-function displayOpration(operand){
-    currentOp=operand;
-    firstNum +=currentNum;
-    currentNum='';
-    input.textContent ="";
-
-}
-function clearNumber(){
-    input.textContent ="";
-    currentNum='';
-    currentOp='';
-}
-function calculatResult(){
-    let num1=parseFloat(firstNum);
-    let num2=parseFloat(input.textContent);
-   
-    switch(currentOp){
+        switch(this.currentOp){
         case '+':
-            input.textContent =num1+num2;
+            this.input.textContent =num1+num2;
             break;
         case '-':
-            input.textContent =num1-num2;
+            this.input.textContent =num1-num2;
             console.log(num1,num2);
             break;
         case '*':
-            input.textContent =num1*num2;
+            this.input.textContent =num1*num2;
             break;
         case '/':
-            input.textContent =num1/num2;
+            this.input.textContent =num1/num2;
             break;
         default:
-             input.textContent =num2;   
+            this.input.textContent =num2;   
+        }
+        this.currentNum = '';
+        this.currentOp = '';
+        this.previousNum = '';
+        this.updatePreviousNum();
+
     }
-    currentNum = '';
-    currentOp = '';
-    firstNum='';
-    
 
 }
 
+const calculator=new Calculator();
